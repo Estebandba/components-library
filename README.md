@@ -1,3 +1,2 @@
-# React-TS-Scaffold
+# components-library
 
-Client side React App scaffold with Typescript.

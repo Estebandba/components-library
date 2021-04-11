@@ -1,8 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {PrimaryButton, SecondaryButton, TertiaryButton } from './components/Buttons';
 
 const App = ()=> (
-    <h1> My App is here. </h1>
+    <>
+        <PrimaryButton> Click </PrimaryButton>
+        <SecondaryButton> Click </SecondaryButton>
+        <TertiaryButton> Click </TertiaryButton>
+    </>
 );
 
 ReactDOM.render(
