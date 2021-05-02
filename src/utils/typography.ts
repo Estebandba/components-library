@@ -1,4 +1,4 @@
-export const primaryFont = '"Yantramanav", regular';
+export const primaryFont = '"Krona One", sans-serif';
 
 export const typeScale = {
     header1: "2.4rem",
