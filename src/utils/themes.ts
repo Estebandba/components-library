@@ -73,6 +73,9 @@ export const darkTheme = {
     formElementBackground: blue[100],
     textOnFormElementBackground: neutral[100],
 
+    inputColor: neutral[200],
+    labelInputColor: neutral[500],
+
     status: {
         warningColor: yellow[100],
         warningColorHover: yellow[200],
