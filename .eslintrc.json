@@ -10,7 +10,8 @@
     ],
     "extends": [
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:mdx/recommended"
     ],
     "rules": {
         "react-hooks/rules-of-hooks": "error",
@@ -18,6 +19,7 @@
         "react/prop-types": "off"
     },
     "settings": {
+        "mdx/code-blocks": true,
         "react": {
             "pragma": "React",
             "version": "detect"
