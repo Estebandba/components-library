@@ -53,7 +53,7 @@ interface IModalStates {
     setShowModal: (value: React.SetStateAction<boolean>) => void
 }
 
-export const SignUpModal = ({showModal, setShowModal}: IModalStates)=> {
+export const SignUpModal = ({showModal, setShowModal}: IModalStates): JSX.Element => {
     const animation = useSpring({
         opacity: showModal ? 1 : 0,
         transform: showModal ? `translateY(0)`: `translateY(-200%)`,
@@ -73,7 +73,7 @@ export const SignUpModal = ({showModal, setShowModal}: IModalStates)=> {
         </animated.div>
     )
 }
-export const SignInModal = ({showModal, setShowModal}: IModalStates)=> {
+export const SignInModal = ({showModal, setShowModal}: IModalStates): JSX.Element=> {
     const animation = useSpring({
         opacity: showModal ? 1 : 0,
         transform: showModal ? `translateY(0)`: `translateY(-200%)`,
@@ -84,9 +84,9 @@ export const SignInModal = ({showModal, setShowModal}: IModalStates)=> {
             <ModalWrapper>
                 <img src={Illustrations.SignIn} alt="Sign in to your account" aria-hidden="true"/>
                 <Label htmlFor="username"></Label>
-                <Input type="text" name="username"> Username </Input>
+                <Input type="text" name="username" value="Username" />
                 <Label htmlFor="password"></Label>
-                <Input type="text"name="password">Password</Input>
+                <Input type="text"name="password" value="Password"/>
                 <PrimaryButton> Sign In!</PrimaryButton>
                 <CloseModalButton onClick={()=> setShowModal(!showModal) } aria-label="Close-Modal">
                     <CloseIcon />
