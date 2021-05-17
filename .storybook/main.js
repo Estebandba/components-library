@@ -7,12 +7,10 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-actions",
-    "@storybook/addon-docs",
-    {
-      name: "@storybook/addon-docs",
-      options: {
-        configureJSX: true
-      }
-    }
-  ]
+    "@storybook/addon-toolbars",
+    "@storybook/addon-knobs",
+  ],
+  "core": {
+    "builder": "webpack5"
+  }
 }
