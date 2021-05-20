@@ -3,6 +3,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import {defaultTheme, darkTheme} from '../src/utils'
 import { withKnobs } from '@storybook/addon-knobs';
+import { withA11y } from '@storybook/addon-a11y';
 
 const MyThemes = {
   defaultTheme,
@@ -35,7 +36,7 @@ const withThemeProvider=(Story,context)=>{
     </ThemeProvider>
   )
 }
-export const decorators = [withThemeProvider, withKnobs];
+export const decorators = [withThemeProvider, withKnobs, withA11y];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
