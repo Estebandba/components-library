@@ -6,12 +6,12 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-actions",
-    "@storybook/addon-toolbars",
+    // "@storybook/addon-actions",
+    // "@storybook/addon-toolbars",
     "@storybook/addon-knobs",
     "@storybook/addon-a11y",
   ],
-  "core": {
-    "builder": "webpack5"
-  }
+  // "core": {
+  //   "builder": "webpack5"
+  // }
 }
