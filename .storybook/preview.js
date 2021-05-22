@@ -1,9 +1,6 @@
 import React from 'react';
-
 import { ThemeProvider } from 'styled-components';
 import {defaultTheme, darkTheme} from '../src/utils'
-import { withKnobs } from '@storybook/addon-knobs';
-import { withA11y } from '@storybook/addon-a11y';
 
 const MyThemes = {
   defaultTheme,
@@ -17,13 +14,11 @@ export const globalTypes = {
     defaultValue: 'defaultTheme',
     toolbar: {
       icon: 'circlehollow',
-      // Array of plain string values or MenuItem shape (see below)
       items: ['defaultTheme', 'darkTheme'],
     },
   },
 };
 
-// Function to obtain the intended theme
 const getTheme = (themeName) => {
   return MyThemes[themeName]
 }
@@ -36,7 +31,7 @@ const withThemeProvider=(Story,context)=>{
     </ThemeProvider>
   )
 }
-export const decorators = [withThemeProvider, withKnobs, withA11y];
+export const decorators = [withThemeProvider];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -45,5 +40,11 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  a11y: {
+    element: '#root',
+    config: {},
+    options: {},
+    manual: false,
   },
 }

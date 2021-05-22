@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { SignInModal } from "./Modal";
+import { SignUpModal } from ".";
 
-export const ModalSignIn:Story = () => {
+export const ModalSignUp:Story = () => {
 
   const[showModal, setShowModal] = useState(true);
   
@@ -12,11 +12,11 @@ export const ModalSignIn:Story = () => {
     setShowModal 
   }
 
-  return <SignInModal {...props} />
+  return <SignUpModal {...props} />
 }
-ModalSignIn.storyName = 'default';
+ModalSignUp.storyName = 'default';
 
 export default {
-  title: 'Components/Modals/SignIn',
-  component: ModalSignIn,
+  title: 'Components/Modals/SignUp',
+  component: ModalSignUp,
 } as Meta;
